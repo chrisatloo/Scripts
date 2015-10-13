@@ -1,0 +1,7 @@
+#! /bin/bash
+
+if [ -f ${PWD##*/}.zip ] ; then 
+	rm ${PWD##*/}.zip 
+fi
+
+ls | zip ${PWD##*/}.zip -@

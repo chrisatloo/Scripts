@@ -1,0 +1,19 @@
+#! /bin/bash
+
+qn="`echo ${PWD##*/} | cut -c 3-`"
+
+if [ ! -f ./suite*.txt ] ; then
+	touch suite${qn}.txt
+fi
+
+for testnum in "$@"
+do
+	if ! fgrep -q "$testnum" suite${qn}.txt ; then
+		echo "$testnum" >> suite${qn}.txt
+ 		touch "$testnum".in
+		touch "$testnum".out
+	else
+		echo "$testnum already exist"
+	fi
+done
+
