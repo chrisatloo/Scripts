@@ -1,5 +1,5 @@
 # Scripts
-Scripts that will make life so much easier for submitting and compiling homework
+Scripts that will make life easier for submitting and compiling homework
 mktest [filename1] [filename2]
 cautomatically creat a suite[foldername abbrev].txt which contains the name of your tests filename.in and filename.out
 it automatically checks against existing tests to make sure you don't overide. 
